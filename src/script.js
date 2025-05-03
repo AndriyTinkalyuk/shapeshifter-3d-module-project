@@ -1,3 +1,8 @@
 import './stylesheet.css';
+import { Core } from './core/Core'
 
-document.getElementById("root").innerHTML = "<h1>Hello World!</h1>";
+
+const app = new Core();
+
+app.start();
+

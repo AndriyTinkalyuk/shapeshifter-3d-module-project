@@ -1,14 +1,138 @@
-html, body {
-    height: 100%;
-    margin: 0;
-    padding: 0;
+body, html {
+  height: 100%;
+  background-color: rgb(67, 67, 67);
 }
 
-body {
-    font-family: Arial, Helvetica, sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: black;
-    color: white;
+h1, h2, h3, h4, h5, h6 {
+  padding: 0;
+  margin: 0;
 }
+
+button {
+  cursor: pointer;
+}
+
+#root {
+  display: flex;
+  gap: 10px;
+  height: 100%;
+  overflow: hidden;
+}
+
+.sidebar { 
+  flex: 0 1 20%;
+  overflow-y: scroll;
+  height: 100vh;
+}
+
+.content {
+  flex: 0 1 80%; 
+}
+
+#viewerRoot {
+  width: 100%;
+  border: 1px solid black;
+}
+
+
+.forms-container {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  margin-bottom: 20px;
+  color: rgb(212, 212, 212);
+}
+
+.figure-list-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 10px 5px 5px;
+    height: 40px;
+    border-radius: 5px;
+    margin-bottom: 5px;
+    background-color: rgb(42, 42, 42);
+    color:white;
+  }
+  
+  .figure-list-item div {
+    overflow: hidden;
+    white-space: nowrap;
+  }
+  
+  h3 {
+    font-size: 12px;
+    font-weight: 700;
+    margin: 0;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+  
+  .meta-info {
+    display: flex;
+    margin-top: 5px;
+  }
+  
+  .geometry-details {
+    color: var(--ng-shaper-dark-grey-3);
+    font-size: 9px;
+    margin: 0 3px;
+  
+  }
+  
+  .color-preview {
+    width: 10px;
+    height: 10px;
+    background: var(--ng-shaper-dark-grey-1);
+    border: 1px solid var(--ng-shaper-black);
+    border-radius: 2px;
+  }
+  
+  .delete-button {
+    width: 20px;
+    border: 0;
+    padding: 5px;
+    cursor: pointer;
+    background: none;
+    color: inherit;
+    font-family: inherit;
+    font-size: inherit;
+  }
+
+
+  form button {
+    padding: 8px;
+    margin-top: 5px;
+  }
+
+  .form-create button {
+    background-color: rgb(6, 166, 6);
+    color: white;
+    border: none;
+  }
+
+  
+  .form-create button:hover {
+    background-color: green;
+  }
+
+  #reset {
+    background-color: rgb(253, 253, 69);
+    color: black;
+    border: none;
+  }
+
+  #reset:hover {
+    background-color: yellow;
+  }
+
+
+  label {
+    display: block;
+  }
+
+
+  h4 {
+    margin-top: 5px;
+  }

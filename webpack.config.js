@@ -2,6 +2,7 @@ const path = require("path");
 
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const { argv } = require("process");
+const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 
 module.exports = (env, argv) => {
     const isDevelopment = argv.mode === "development";
@@ -35,7 +36,8 @@ module.exports = (env, argv) => {
         plugins: [
           new HtmlWebpackPlugin({
             template: "./src/index.html"
-          })
+          }),
+          new BundleAnalyzerPlugin()
         ],
 
         devtool: 'source-map',

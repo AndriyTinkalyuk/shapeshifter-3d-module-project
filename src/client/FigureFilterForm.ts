@@ -161,19 +161,14 @@ resetFilters(e: Event) {
 
   if (!geometrySelect || !minSizeInput || !maxSizeInput || !colorInput) {
     console.error("One or more form elements are missing!");
-    this.onFilterHandler([]);
     return;
   }
 
-  let geometryTypeValue = geometrySelect.value;
-  let minSize = parseInt(minSizeInput.value, 10);
-  let maxSize = parseInt(maxSizeInput.value, 10);
-  let color = colorInput.value.toLowerCase();
 
-  geometryTypeValue = "all";
-  minSize = 1;
-  maxSize = 10;
-  color = "#000000";
+  geometrySelect.value = "all";
+  minSizeInput.value = "1";
+  maxSizeInput.value = "10";
+  colorInput.value = "#000000";
 
   this.applyFilters();
 }

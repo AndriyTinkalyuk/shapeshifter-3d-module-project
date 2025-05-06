@@ -657,6 +657,13 @@
       "color": "#0aa23e",
       "geometryType": "BOX",
       "size": 7
+    },
+    {
+      "id": "928df727-d5ed-4ea1-bfa5-a80093bf0aaa",
+      "name": "234",
+      "color": "#000000",
+      "geometryType": "BOX",
+      "size": "5"
     }
   ]
 }

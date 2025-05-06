@@ -92,7 +92,7 @@ export class Form {
 
           
 
-          geometryType: geometryType,
+          geometryType: (geometryType as HTMLSelectElement).value, 
           size: (size as HTMLInputElement).value,
           color: (color as HTMLInputElement).value,
         });

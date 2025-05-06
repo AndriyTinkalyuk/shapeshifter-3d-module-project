@@ -16,22 +16,22 @@ button {
   display: flex;
   gap: 10px;
   height: 100%;
-  overflow: hidden;
+  
 }
 
 .sidebar { 
-  flex: 0 1 20%;
+  flex: 0 1 20%; 
   overflow-y: scroll;
-  height: 100vh;
+  height: 100%;
 }
 
 .content {
-  flex: 0 1 80%; 
+  flex: 1; 
 }
 
 #viewerRoot {
-  width: 100%;
   border: 1px solid black;
+  
 }
 
 

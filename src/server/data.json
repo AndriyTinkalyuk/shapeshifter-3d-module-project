@@ -4,673 +4,659 @@
       "id": "003115ca-fa84-4b1b-8cf6-155457801bb8",
       "name": "Figure 1",
       "color": "#66d25c",
-      "geometryType": "BoxGeometry",
-      "size": "6"
+      "geometryType": "BOX",
+      "size": 6
     },
     {
       "id": "746e5dbc-b08a-450f-917c-67c77df86971",
       "name": "Figure 2",
       "color": "#b1f230",
-      "geometryType": "CylinderGeometry",
-      "size": "6"
+      "geometryType": "CYLINDER",
+      "size": 6
     },
     {
       "id": "b5878fd0-f269-4e4c-9668-81bd6a7f504e",
       "name": "Figure 3",
       "color": "#c03424",
-      "geometryType": "BoxGeometry",
-      "size": "2"
+      "geometryType": "BOX",
+      "size": 2
     },
     {
       "id": "4c2a4245-08b6-4a39-88a7-313801d69d55",
       "name": "Figure 4",
       "color": "#fec97f",
-      "geometryType": "BoxGeometry",
-      "size": "9"
+      "geometryType": "BOX",
+      "size": 9
     },
     {
       "id": "099f25a4-2897-4685-8185-1e21dcf3af9e",
       "name": "Figure 5",
       "color": "#704c98",
-      "geometryType": "SphereGeometry",
-      "size": "3"
+      "geometryType": "SPHERE",
+      "size": 3
     },
     {
       "id": "0d8337fa-e81c-4de9-84fe-719321791650",
       "name": "Figure 6",
       "color": "#b55836",
-      "geometryType": "BoxGeometry",
-      "size": "1"
+      "geometryType": "BOX",
+      "size": 1
     },
     {
       "id": "3575b8d5-94e6-4c8f-96ab-be49201d5924",
       "name": "Figure 7",
       "color": "#980b20",
-      "geometryType": "CylinderGeometry",
-      "size": "5"
+      "geometryType": "CYLINDER",
+      "size": 5
     },
     {
       "id": "cd0ea22a-5262-47a0-9ff2-2cdbe4b22bac",
       "name": "Figure 8",
       "color": "#ed1b2f",
-      "geometryType": "SphereGeometry",
-      "size": "7"
+      "geometryType": "SPHERE",
+      "size": 7
     },
     {
       "id": "62299536-20ba-42cd-9b5b-9a3f6b9cde4b",
       "name": "Figure 9",
       "color": "#b67011",
-      "geometryType": "BoxGeometry",
-      "size": "9"
+      "geometryType": "BOX",
+      "size": 9
     },
     {
       "id": "18c420a9-000f-49b7-b24c-6a5e957ae0e7",
       "name": "Figure 10",
       "color": "#cea5e3",
-      "geometryType": "BoxGeometry",
-      "size": "2"
+      "geometryType": "BOX",
+      "size": 2
     },
     {
       "id": "d7b829ad-ce9d-4499-9a53-27529d918520",
       "name": "Figure 11",
       "color": "#ea9ef0",
-      "geometryType": "BoxGeometry",
-      "size": "7"
+      "geometryType": "BOX",
+      "size": 7
     },
     {
       "id": "6affd5b0-ee1b-44bd-8bc8-185992215c27",
       "name": "Figure 12",
       "color": "#6f0e3e",
-      "geometryType": "SphereGeometry",
-      "size": "10"
+      "geometryType": "SPHERE",
+      "size": 10
     },
     {
       "id": "67fa57ee-4ae1-4bcc-a307-e5e9c925a176",
       "name": "Figure 13",
       "color": "#1f6d6a",
-      "geometryType": "CylinderGeometry",
-      "size": "2"
+      "geometryType": "CYLINDER",
+      "size": 2
     },
     {
       "id": "095aa62c-d468-4fed-8773-908bf2459e0a",
       "name": "Figure 14",
       "color": "#58e1e8",
-      "geometryType": "BoxGeometry",
-      "size": "2"
+      "geometryType": "BOX",
+      "size": 2
     },
     {
       "id": "0ea0fc95-acc4-4489-8466-7a3466e231ee",
       "name": "Figure 15",
       "color": "#c124e0",
-      "geometryType": "CylinderGeometry",
-      "size": "8"
+      "geometryType": "CYLINDER",
+      "size": 8
     },
     {
       "id": "b6cf9f58-7ff4-40a8-b005-3f608cd87c92",
       "name": "Figure 17",
       "color": "#beb933",
-      "geometryType": "CylinderGeometry",
-      "size": "8"
+      "geometryType": "CYLINDER",
+      "size": 8
     },
     {
       "id": "58768580-e8ba-45b3-9373-c5d4ccc0df65",
       "name": "Figure 18",
       "color": "#3fe032",
-      "geometryType": "BoxGeometry",
-      "size": "6"
+      "geometryType": "BOX",
+      "size": 6
     },
     {
       "id": "ddd00cd7-6488-4384-a900-567169b187e9",
       "name": "Figure 19",
       "color": "#0c56e8",
-      "geometryType": "CylinderGeometry",
-      "size": "6"
+      "geometryType": "CYLINDER",
+      "size": 6
     },
     {
       "id": "5860a576-585a-4bf4-ac8d-3dd4fdadd5b0",
       "name": "Figure 20",
       "color": "#8fd7b9",
-      "geometryType": "BoxGeometry",
-      "size": "9"
+      "geometryType": "BOX",
+      "size": 9
     },
     {
       "id": "5ed33b85-186b-4e12-a1be-93b109701595",
       "name": "Figure 21",
       "color": "#cb57bb",
-      "geometryType": "CylinderGeometry",
-      "size": "4"
+      "geometryType": "CYLINDER",
+      "size": 4
     },
     {
       "id": "665cd1e9-96d4-4026-85f3-b0264f219dd9",
       "name": "Figure 22",
       "color": "#e08a62",
-      "geometryType": "CylinderGeometry",
-      "size": "8"
+      "geometryType": "CYLINDER",
+      "size": 8
     },
     {
       "id": "0d9d8efe-4306-4753-afec-0b14d422aec0",
       "name": "Figure 23",
       "color": "#a58896",
-      "geometryType": "SphereGeometry",
-      "size": "1"
+      "geometryType": "SPHERE",
+      "size": 1
     },
     {
       "id": "f955c1f3-d3e5-4911-8ad9-1563ea55164a",
       "name": "Figure 24",
       "color": "#145bb8",
-      "geometryType": "BoxGeometry",
-      "size": "8"
+      "geometryType": "BOX",
+      "size": 8
     },
     {
       "id": "023a09ff-9505-4da8-9005-e9ab8bec64c6",
       "name": "Figure 25",
       "color": "#a7f702",
-      "geometryType": "BoxGeometry",
-      "size": "1"
+      "geometryType": "BOX",
+      "size": 1
     },
     {
       "id": "d44da06e-19be-4b33-8fcd-d9ca3a608e91",
       "name": "Figure 26",
       "color": "#dcf357",
-      "geometryType": "CylinderGeometry",
-      "size": "1"
+      "geometryType": "CYLINDER",
+      "size": 1
     },
     {
       "id": "261c57c1-fb67-4749-a579-f4427ba8b05e",
       "name": "Figure 27",
       "color": "#93c182",
-      "geometryType": "BoxGeometry",
-      "size": "4"
+      "geometryType": "BOX",
+      "size": 4
     },
     {
       "id": "1a3b5693-809e-4650-a152-9850fc6cbeaf",
       "name": "Figure 28",
       "color": "#5c48c4",
-      "geometryType": "CylinderGeometry",
-      "size": "7"
+      "geometryType": "CYLINDER",
+      "size": 7
     },
     {
       "id": "34bc5dd7-d788-4b8e-aced-10d299cbd3e4",
       "name": "Figure 29",
       "color": "#cdca8e",
-      "geometryType": "SphereGeometry",
-      "size": "3"
+      "geometryType": "SPHERE",
+      "size": 3
     },
     {
       "id": "e0841f37-0fad-4c1b-86e8-5dc255528cb4",
       "name": "Figure 30",
       "color": "#c351a0",
-      "geometryType": "CylinderGeometry",
-      "size": "2"
+      "geometryType": "CYLINDER",
+      "size": 2
     },
     {
       "id": "5c06ecc9-c79e-41b1-a641-007e6975ddf3",
       "name": "Figure 31",
       "color": "#a12ca7",
-      "geometryType": "SphereGeometry",
-      "size": "9"
+      "geometryType": "SPHERE",
+      "size": 9
     },
     {
       "id": "9f3babd8-b556-4df0-86e7-7fe862f4784b",
       "name": "Figure 32",
       "color": "#86208d",
-      "geometryType": "SphereGeometry",
-      "size": "4"
+      "geometryType": "SPHERE",
+      "size": 4
     },
     {
       "id": "1c629a8b-94ee-4f2e-8e06-44b0269eb000",
       "name": "Figure 33",
       "color": "#11365d",
-      "geometryType": "SphereGeometry",
-      "size": "1"
+      "geometryType": "SPHERE",
+      "size": 1
     },
     {
       "id": "9a32626a-bb4a-48f3-b86b-e588f0a73ab3",
       "name": "Figure 34",
       "color": "#a431ad",
-      "geometryType": "BoxGeometry",
-      "size": "8"
+      "geometryType": "BOX",
+      "size": 8
     },
     {
       "id": "6a298d5f-22a0-47f5-abcd-7be48543de36",
       "name": "Figure 35",
       "color": "#671474",
-      "geometryType": "BoxGeometry",
-      "size": "1"
+      "geometryType": "BOX",
+      "size": 1
     },
     {
       "id": "024cd156-cf2a-4873-8268-914f53ce83e0",
       "name": "Figure 36",
       "color": "#9dd892",
-      "geometryType": "BoxGeometry",
-      "size": "4"
+      "geometryType": "BOX",
+      "size": 4
     },
     {
       "id": "072a5507-e6fb-4ce9-9f38-2b2370a9ff8c",
       "name": "Figure 37",
       "color": "#9a7ced",
-      "geometryType": "CylinderGeometry",
-      "size": "9"
+      "geometryType": "CYLINDER",
+      "size": 9
     },
     {
       "id": "c117f02a-e2ef-43e9-87f8-8bccba4e7f7b",
       "name": "Figure 38",
       "color": "#ab43a8",
-      "geometryType": "BoxGeometry",
-      "size": "5"
+      "geometryType": "BOX",
+      "size": 5
     },
     {
       "id": "a5f835d1-3a94-41b7-9ddb-68b31cc0aa25",
       "name": "Figure 39",
       "color": "#2de7a1",
-      "geometryType": "SphereGeometry",
-      "size": "9"
+      "geometryType": "SPHERE",
+      "size": 9
     },
     {
       "id": "802e848d-2aac-4718-b050-dbcc2077005d",
       "name": "Figure 40",
       "color": "#4365dc",
-      "geometryType": "BoxGeometry",
-      "size": "9"
+      "geometryType": "BOX",
+      "size": 9
     },
     {
       "id": "5c452c37-ecb6-42d5-9e52-b3a73637dc33",
       "name": "Figure 41",
       "color": "#ab6ba8",
-      "geometryType": "CylinderGeometry",
-      "size": "2"
+      "geometryType": "CYLINDER",
+      "size": 2
     },
     {
       "id": "afe42981-2f1a-4fd8-a015-f5ddcfcf8160",
       "name": "Figure 42",
       "color": "#297a69",
-      "geometryType": "CylinderGeometry",
-      "size": "6"
+      "geometryType": "CYLINDER",
+      "size": 6
     },
     {
       "id": "70d3a25d-82f1-4b49-948c-f312b0bafe20",
       "name": "Figure 43",
       "color": "#5b7823",
-      "geometryType": "CylinderGeometry",
-      "size": "7"
+      "geometryType": "CYLINDER",
+      "size": 7
     },
     {
       "id": "49f94cbe-7a1e-4311-b58c-50f289abc25e",
       "name": "Figure 44",
       "color": "#b5bbd7",
-      "geometryType": "CylinderGeometry",
-      "size": "2"
+      "geometryType": "CYLINDER",
+      "size": 2
     },
     {
       "id": "4623cdae-9e7e-4abb-b694-6c7c2f0f2922",
       "name": "Figure 45",
       "color": "#37a4bf",
-      "geometryType": "SphereGeometry",
-      "size": "1"
+      "geometryType": "SPHERE",
+      "size": 1
     },
     {
       "id": "c4c82aa7-8219-4666-8109-fc6e6ccbf27b",
       "name": "Figure 46",
       "color": "#0a0e53",
-      "geometryType": "BoxGeometry",
-      "size": "9"
+      "geometryType": "BOX",
+      "size": 9
     },
     {
       "id": "4ae4364e-d4cb-4c79-b394-3d460949c302",
       "name": "Figure 47",
       "color": "#166aee",
-      "geometryType": "CylinderGeometry",
-      "size": "6"
+      "geometryType": "CYLINDER",
+      "size": 6
     },
     {
       "id": "774d49da-fcb3-44d7-80d9-8f7a23a35038",
       "name": "Figure 48",
       "color": "#a28236",
-      "geometryType": "SphereGeometry",
-      "size": "8"
-    },
-    {
-      "id": "1cdb32f4-e73d-40ae-8782-ff9e0fab89ef",
-      "name": "Figure 49",
-      "color": "#2dfa8c",
-      "geometryType": "CylinderGeometry",
-      "size": "6"
-    },
-    {
-      "id": "b03bf01e-9506-4479-833c-1b24377b7af1",
-      "name": "Figure 50",
-      "color": "#fb390a",
-      "geometryType": "BoxGeometry",
-      "size": "7"
+      "geometryType": "SPHERE",
+      "size": 8
     },
     {
       "id": "5e84c59b-91dc-4357-ba44-ef1f69657d72",
       "name": "Figure 51",
       "color": "#70b0d5",
-      "geometryType": "CylinderGeometry",
-      "size": "2"
+      "geometryType": "CYLINDER",
+      "size": 2
     },
     {
       "id": "caf22b6a-df88-47e1-b82f-5163eb420c48",
       "name": "Figure 52",
       "color": "#1fa0ce",
-      "geometryType": "SphereGeometry",
-      "size": "10"
+      "geometryType": "SPHERE",
+      "size": 10
     },
     {
       "id": "ff2c816f-7d4b-46eb-80c1-ad1ccec1aac7",
       "name": "Figure 54",
       "color": "#4c078d",
-      "geometryType": "BoxGeometry",
-      "size": "3"
+      "geometryType": "BOX",
+      "size": 3
     },
     {
       "id": "d64ff183-6e00-41c3-95c2-2d6d4a4b4e0b",
       "name": "Figure 55",
       "color": "#712b24",
-      "geometryType": "BoxGeometry",
-      "size": "4"
+      "geometryType": "BOX",
+      "size": 4
     },
     {
       "id": "34db887f-3522-4ee0-b1eb-fc653a4bd61b",
       "name": "Figure 56",
       "color": "#a498f4",
-      "geometryType": "SphereGeometry",
-      "size": "10"
+      "geometryType": "SPHERE",
+      "size": 10
     },
     {
       "id": "4e3396d1-007d-4bce-ade5-477f228e71b4",
       "name": "Figure 57",
       "color": "#1227a8",
-      "geometryType": "CylinderGeometry",
-      "size": "4"
+      "geometryType": "CYLINDER",
+      "size": 4
     },
     {
       "id": "54a0a6f3-fbbe-4def-87d7-0a1433959536",
       "name": "Figure 58",
       "color": "#e11997",
-      "geometryType": "SphereGeometry",
-      "size": "6"
+      "geometryType": "SPHERE",
+      "size": 6
     },
     {
       "id": "3cd8f7b2-5e30-4e61-b365-028388c59fb6",
       "name": "Figure 60",
       "color": "#9b2d3d",
-      "geometryType": "BoxGeometry",
-      "size": "2"
+      "geometryType": "BOX",
+      "size": 2
     },
     {
       "id": "016a88f4-4070-4ce6-b26d-c819518d2bf0",
       "name": "Figure 61",
       "color": "#908ba2",
-      "geometryType": "BoxGeometry",
-      "size": "4"
+      "geometryType": "BOX",
+      "size": 4
     },
     {
       "id": "2d7aff22-bd5b-4d00-bb9a-6246aaacf461",
       "name": "Figure 62",
       "color": "#f214a5",
-      "geometryType": "CylinderGeometry",
-      "size": "6"
+      "geometryType": "CYLINDER",
+      "size": 6
     },
     {
       "id": "02c7da18-142b-4b72-8197-93eb5e7eb986",
       "name": "Figure 63",
       "color": "#c8d859",
-      "geometryType": "BoxGeometry",
-      "size": "9"
+      "geometryType": "BOX",
+      "size": 9
     },
     {
       "id": "bcc6e313-b96a-410f-9948-efa074ce9013",
       "name": "Figure 64",
       "color": "#59a3ec",
-      "geometryType": "BoxGeometry",
-      "size": "8"
+      "geometryType": "BOX",
+      "size": 8
     },
     {
       "id": "51f3f3d9-afb4-4571-b53e-2c369d74be75",
       "name": "Figure 65",
       "color": "#1ca0ac",
-      "geometryType": "SphereGeometry",
-      "size": "8"
+      "geometryType": "SPHERE",
+      "size": 8
     },
     {
       "id": "14f8e43f-364e-4416-9aee-c0792c7bab7d",
       "name": "Figure 66",
       "color": "#bcaee9",
-      "geometryType": "BoxGeometry",
-      "size": "2"
+      "geometryType": "BOX",
+      "size": 2
     },
     {
       "id": "9c498761-2ae3-48ce-a3ff-333a348a9d44",
       "name": "Figure 67",
       "color": "#465c9f",
-      "geometryType": "SphereGeometry",
-      "size": "6"
+      "geometryType": "SPHERE",
+      "size": 6
     },
     {
       "id": "955a081b-c589-42a3-8d2b-6cdf9ac26f0a",
       "name": "Figure 68",
       "color": "#405baa",
-      "geometryType": "CylinderGeometry",
-      "size": "4"
+      "geometryType": "CYLINDER",
+      "size": 4
     },
     {
       "id": "0e839e2a-e4ae-438f-aaf3-c708d4998d84",
       "name": "Figure 69",
       "color": "#c16c3b",
-      "geometryType": "CylinderGeometry",
-      "size": "6"
+      "geometryType": "CYLINDER",
+      "size": 6
     },
     {
       "id": "e300962f-0280-4cb8-805f-ccc95f1b7879",
       "name": "Figure 70",
       "color": "#cc231a",
-      "geometryType": "SphereGeometry",
-      "size": "2"
+      "geometryType": "SPHERE",
+      "size": 2
     },
     {
       "id": "94430fe3-9305-41ea-9162-3886db480072",
       "name": "Figure 71",
       "color": "#7134c7",
-      "geometryType": "SphereGeometry",
-      "size": "7"
+      "geometryType": "SPHERE",
+      "size": 7
     },
     {
       "id": "2c16faf6-02d8-475c-9302-4eb03d04e33a",
       "name": "Figure 72",
       "color": "#9ae25a",
-      "geometryType": "CylinderGeometry",
-      "size": "6"
+      "geometryType": "CYLINDER",
+      "size": 6
     },
     {
       "id": "bda767ac-4f21-479f-a4dc-cb9fff4c30b3",
       "name": "Figure 73",
       "color": "#d49afb",
-      "geometryType": "CylinderGeometry",
-      "size": "7"
+      "geometryType": "CYLINDER",
+      "size": 7
     },
     {
       "id": "3bbaea3d-cea4-4ba4-8686-e6602663a8ce",
       "name": "Figure 74",
       "color": "#2b7e20",
-      "geometryType": "BoxGeometry",
-      "size": "7"
+      "geometryType": "BOX",
+      "size": 7
     },
     {
       "id": "34ec2d24-9e46-4290-b4b4-eb72d0d5b4fa",
       "name": "Figure 75",
       "color": "#d0c34d",
-      "geometryType": "SphereGeometry",
-      "size": "8"
+      "geometryType": "SPHERE",
+      "size": 8
     },
     {
       "id": "5087dd3f-543b-4569-a7fc-3c509bd30720",
       "name": "Figure 76",
       "color": "#5a842c",
-      "geometryType": "BoxGeometry",
-      "size": "1"
+      "geometryType": "BOX",
+      "size": 1
     },
     {
       "id": "e6837e5c-fe3e-4574-a788-47a39ef74caf",
       "name": "Figure 77",
       "color": "#0949fd",
-      "geometryType": "SphereGeometry",
-      "size": "4"
+      "geometryType": "SPHERE",
+      "size": 4
     },
     {
       "id": "c9370805-7f37-44f7-8c0a-97146ac31dd1",
       "name": "Figure 78",
       "color": "#ba3511",
-      "geometryType": "SphereGeometry",
-      "size": "4"
+      "geometryType": "SPHERE",
+      "size": 4
     },
     {
       "id": "06ca486a-aba7-4916-bcee-33497583a5f7",
       "name": "Figure 79",
       "color": "#91dd27",
-      "geometryType": "CylinderGeometry",
-      "size": "7"
+      "geometryType": "CYLINDER",
+      "size": 7
     },
     {
       "id": "930f4bb1-13ed-4f3d-af3e-265623e52bb7",
       "name": "Figure 80",
       "color": "#d48d44",
-      "geometryType": "CylinderGeometry",
-      "size": "7"
+      "geometryType": "CYLINDER",
+      "size": 7
     },
     {
       "id": "29250722-cd66-49e6-b01d-a7289af8f202",
       "name": "Figure 81",
       "color": "#aeabac",
-      "geometryType": "BoxGeometry",
-      "size": "8"
+      "geometryType": "BOX",
+      "size": 8
     },
     {
       "id": "26b93703-7528-4403-b1d3-d701c20d40f2",
       "name": "Figure 82",
       "color": "#c3bfd9",
-      "geometryType": "SphereGeometry",
-      "size": "1"
+      "geometryType": "SPHERE",
+      "size": 1
     },
     {
       "id": "2848fd5b-c5ee-4803-b2da-48b7e8c97683",
       "name": "Figure 83",
       "color": "#ccb796",
-      "geometryType": "BoxGeometry",
-      "size": "2"
+      "geometryType": "BOX",
+      "size": 2
     },
     {
       "id": "e807d9e0-7d85-4763-ad4f-77ad405a9239",
       "name": "Figure 85",
       "color": "#29aeee",
-      "geometryType": "SphereGeometry",
-      "size": "1"
+      "geometryType": "SPHERE",
+      "size": 1
     },
     {
       "id": "d66ebbe6-433e-47d5-822f-2e406427a87b",
       "name": "Figure 86",
       "color": "#ccc21f",
-      "geometryType": "BoxGeometry",
-      "size": "3"
+      "geometryType": "BOX",
+      "size": 3
     },
     {
       "id": "d4eabf12-049a-408c-b921-9eaa7689f220",
       "name": "Figure 87",
       "color": "#85bd2b",
-      "geometryType": "BoxGeometry",
-      "size": "9"
+      "geometryType": "BOX",
+      "size": 9
     },
     {
       "id": "0d31bcfd-3738-40c8-8cee-6d026abc92fd",
       "name": "Figure 88",
       "color": "#6a08b3",
-      "geometryType": "CylinderGeometry",
-      "size": "7"
+      "geometryType": "CYLINDER",
+      "size": 7
     },
     {
       "id": "4e575904-0209-490b-9e80-782658379229",
       "name": "Figure 89",
       "color": "#a57924",
-      "geometryType": "CylinderGeometry",
-      "size": "4"
+      "geometryType": "CYLINDER",
+      "size": 4
     },
     {
       "id": "a7a90faa-34b9-40b8-ac73-c03c4d05aff7",
       "name": "Figure 90",
       "color": "#d3205f",
-      "geometryType": "CylinderGeometry",
-      "size": "5"
+      "geometryType": "CYLINDER",
+      "size": 5
     },
     {
       "id": "00090684-567a-4ee1-92cf-af98db59c64c",
       "name": "Figure 91",
       "color": "#56ecec",
-      "geometryType": "SphereGeometry",
-      "size": "10"
+      "geometryType": "SPHERE",
+      "size": 10
     },
     {
       "id": "6fb6b2cb-063f-4f87-863b-24e17f210271",
       "name": "Figure 92",
       "color": "#e7b50e",
-      "geometryType": "SphereGeometry",
-      "size": "5"
+      "geometryType": "SPHERE",
+      "size": 5
     },
     {
       "id": "cfbf3a81-d7f3-43ee-8dd3-c9d60e971591",
       "name": "Figure 93",
       "color": "#253e2e",
-      "geometryType": "SphereGeometry",
-      "size": "10"
+      "geometryType": "SPHERE",
+      "size": 10
     },
     {
       "id": "69f43653-48f7-43a7-8970-250299d84319",
       "name": "Figure 94",
       "color": "#448f5a",
-      "geometryType": "SphereGeometry",
-      "size": "7"
+      "geometryType": "SPHERE",
+      "size": 7
     },
     {
       "id": "57b599fd-6b3c-44f0-b790-3871a611035e",
       "name": "Figure 95",
       "color": "#a26aef",
-      "geometryType": "SphereGeometry",
-      "size": "3"
+      "geometryType": "SPHERE",
+      "size": 3
     },
     {
       "id": "0ed340dd-4a35-4c5c-bbc4-3c0b87243c3a",
       "name": "Figure 96",
       "color": "#bb9bae",
-      "geometryType": "SphereGeometry",
-      "size": "2"
+      "geometryType": "SPHERE",
+      "size": 2
     },
     {
       "id": "83ef9016-1226-4067-84d6-491a8d103239",
       "name": "Figure 97",
       "color": "#8b35c0",
-      "geometryType": "CylinderGeometry",
-      "size": "9"
+      "geometryType": "CYLINDER",
+      "size": 9
     },
     {
       "id": "c9f5e093-a6a0-4c31-833e-b5cf8bbc8bc5",
       "name": "Figure 98",
       "color": "#400b40",
-      "geometryType": "CylinderGeometry",
-      "size": "9"
+      "geometryType": "CYLINDER",
+      "size": 9
     },
     {
       "id": "1319abc3-0e30-42f5-8b3a-487726b31af8",
       "name": "Figure 99",
       "color": "#97cf01",
-      "geometryType": "BoxGeometry",
-      "size": "9"
+      "geometryType": "BOX",
+      "size": 9
     },
     {
       "id": "e0833f85-cdc4-4d77-8f4c-7d438cf4b4aa",
       "name": "Figure 100",
       "color": "#0aa23e",
-      "geometryType": "BoxGeometry",
-      "size": "7"
+      "geometryType": "BOX",
+      "size": 7
     }
   ]
 }

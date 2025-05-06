@@ -4,8 +4,22 @@ import { FigureFilterForm } from '../client/FigureFilterForm';
 import {FigureViewModelService} from '../services/FigureViewModelService';
 import {figureApiService} from '../api/FigureApiService';
 import {Viewer} from "../three/Viewer";
+import { Figure } from '../models/Figure';
 
 export class Core {
+  viewerCanvas: HTMLCanvasElement;
+  formController: Form;
+  filterController: FigureFilterForm;
+  figureListController: FigureList;
+  figureViewModelService: FigureViewModelService;
+
+  viewModels: Figure[];
+
+  formWrapper: HTMLDivElement;
+  contentWrapper: HTMLDivElement;
+
+  viewerController:Viewer;
+
   constructor () {
     this.viewerCanvas = document.createElement("canvas");
     this.viewerCanvas.id = "viewerRoot";
@@ -36,7 +50,7 @@ export class Core {
       this.formWrapper,
       this.viewerCanvas
     )
-    root.append(
+    root!.append(
       this.contentWrapper,
       this.figureListController.figureList
     );
@@ -48,11 +62,13 @@ export class Core {
   async start() {
     const figuresData = await figureApiService.getFiguresData();
 
+    if(figuresData) {
     figuresData.forEach(figureData => {
       const viewModel = this.figureViewModelService.toViewModel(figureData);
       this.viewModels.push(viewModel);
       this.viewerController.draw(viewModel);
-    });
+      
+    })};
 
     console.log(this.viewModels);
     
@@ -61,7 +77,7 @@ export class Core {
     this.filterController.restoreFilters();
   }
 
-  onCreateHandler(formData) {
+  onCreateHandler(formData : Figure) {
     const figureViewModel = this.figureViewModelService.toViewModel(formData);
     figureApiService.addFigureData(figureViewModel);
     this.viewModels.push(figureViewModel);
@@ -69,14 +85,14 @@ export class Core {
     this.viewerController.draw(figureViewModel);
   }
 
-  onDeleteHandler(id) {
+  onDeleteHandler(id: string) {
     figureApiService.removeFigureData(id);
-    this.viewerController.removeFigure(id);
+    this.viewerController.remove(id);
     this.viewModels.splice(this.viewModels.findIndex(vm => vm.id === id), 1);
     this.figureListController.updateList(this.viewModels);
   }
 
-  onFilterHandler(listData) {
+  onFilterHandler(listData: Figure[]) {
     this.figureListController.updateList(listData);
   }
 }

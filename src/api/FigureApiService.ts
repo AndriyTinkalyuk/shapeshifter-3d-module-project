@@ -1,6 +1,9 @@
 import axios from "axios";
+import { Figure } from "../models/Figure";
 
 export class FigureApiService {
+    data: Figure[];
+    basePath : string;
     constructor() {
         this.data = [];
         this.basePath = "http://localhost:3000/figures";
@@ -16,7 +19,7 @@ export class FigureApiService {
         }
     }
 
-    async addFigureData(figureData) {
+    async addFigureData(figureData: Figure) {
         try {
             const responce = await axios.post(this.basePath, figureData);
             const newFigureData = responce.data;
@@ -27,9 +30,10 @@ export class FigureApiService {
         }
     }
 
-    async updateFigureData(figureData) {
+    async updateFigureData(figureData: Figure) {
         try {
-            const updateFigureData = await axios.put(`${this.basePath}/${figureData.id}`, figureData);
+            const responce = await axios.put(`${this.basePath}/${figureData.id}`, figureData);
+            const updateFigureData = responce.data;
             const index = this.data.findIndex((item) => item.id === figureData.id);
             if (index !== -1) {
                 this.data[index] = updateFigureData;
@@ -40,7 +44,7 @@ export class FigureApiService {
         }
     }
 
-    async removeFigureData(figureId) {
+    async removeFigureData(figureId: string) {
         try {
             await axios.delete(`${this.basePath}/${figureId}`);
             const index = this.data.findIndex((item) => item.id === figureId);

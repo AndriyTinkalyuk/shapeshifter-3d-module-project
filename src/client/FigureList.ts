@@ -1,6 +1,10 @@
+import { Figure } from "../models/Figure";
 
 export class FigureList {
-  constructor(onDeleteHandler) {
+  figureList: HTMLDivElement;
+  figureListItems: Array<any>;
+  onDeleteHandler: Function;
+  constructor(onDeleteHandler: Function) {
     this.figureList = document.createElement("div");
     this.figureList.classList.add("figure-list");
     this.figureList.classList.add("sidebar");
@@ -8,7 +12,7 @@ export class FigureList {
     this.onDeleteHandler = onDeleteHandler;
   }
 
-  createFigureListItem(figure) {
+  createFigureListItem(figure: Figure) {
     const figureListItem = document.createElement("div");
     figureListItem.classList.add("figure-list-item");
     figureListItem.id = figure.id;
@@ -43,7 +47,7 @@ export class FigureList {
     return figureListItem;
   }
 
-  updateList(figures) {
+  updateList(figures: Figure[]) {
     this.figureListItems = [];
     this.figureList.innerHTML = "";
 

@@ -1,9 +1,12 @@
+import { Figure } from "../models/Figure";
 import { GeometryTypes } from "../models/GeometryTypes";
 import { SortTypes } from "../models/SortTypes";
 
 export class FigureFilterForm {
-
-    constructor(onFilterHandler) {
+    filterFigures: Figure[];
+    form: HTMLFormElement;
+    onFilterHandler: Function;
+    constructor(onFilterHandler: Function) {
       this.filterFigures = [];
 
        this.form = document.createElement("form");
@@ -68,7 +71,7 @@ export class FigureFilterForm {
         sortTypes.forEach((sortType) => {
           const option = document.createElement("option");
           option.value = sortType[0];
-          option.textContent = sortType[1];
+          option.textContent= sortType[1] as string;
           sortSelect.appendChild(option);
         });
 
@@ -81,18 +84,18 @@ export class FigureFilterForm {
          this.form.appendChild(resetButton);
 
 
-         this.form.querySelector("#filterGeometryType").addEventListener("change", this.applyFilters.bind(this));
-         this.form.querySelector("#minFilterSize").addEventListener("input", this.applyFilters.bind(this));
-         this.form.querySelector("#maxFilterSize").addEventListener("input",  this.applyFilters.bind(this));
-         this.form.querySelector("#filterColor").addEventListener("input", this.applyFilters.bind(this));
-         this.form.querySelector("#sort").addEventListener("change", this.applyFilters.bind(this));
-         this.form.querySelector("#reset").addEventListener("click", this.resetFilters.bind(this));
+         geometrySelect.addEventListener("change", this.applyFilters.bind(this));
+         minSizeInput.addEventListener("input", this.applyFilters.bind(this));
+         maxSizeInput.addEventListener("input",  this.applyFilters.bind(this));
+         colorInput.addEventListener("input", this.applyFilters.bind(this));
+         sortSelect.addEventListener("change", this.applyFilters.bind(this));
+         resetButton.addEventListener("click", this.resetFilters.bind(this));
 
     }
      
 
      
-  createFormField(labelText, inputElement) {
+  createFormField(labelText: string, inputElement: HTMLElement) {
     const fieldWrapper = document.createElement("div");
     fieldWrapper.classList.add("formField");
 
@@ -111,18 +114,26 @@ export class FigureFilterForm {
 
 
   applyFilters() {
-    const geometryTypeValue = this.form.querySelector("#filterGeometryType").value;
-    const minSize = parseInt(this.form.querySelector("#minFilterSize").value, 10);
-    const maxSize = parseInt(this.form.querySelector("#maxFilterSize").value, 10);
-    const color = this.form.querySelector("#filterColor").value.toLowerCase();
+  const geometrySelect = this.form.querySelector("#filterGeometryType") as HTMLSelectElement;
+  const minSizeInput = this.form.querySelector("#minFilterSize") as HTMLInputElement;
+  const maxSizeInput = this.form.querySelector("#maxFilterSize") as HTMLInputElement;
+  const colorInput = this.form.querySelector("#filterColor") as HTMLInputElement;
 
-    console.log(GeometryTypes[geometryTypeValue]);
-    console.log(this.filterFigures);
-    
+  if (!geometrySelect || !minSizeInput || !maxSizeInput || !colorInput) {
+    console.error("One or more form elements are missing!");
+    this.onFilterHandler([]);
+    return;
+  }
+
+  const geometryTypeValue = geometrySelect.value;
+  const minSize = parseInt(minSizeInput.value, 10);
+  const maxSize = parseInt(maxSizeInput.value, 10);
+  const color = colorInput.value.toLowerCase();
+
 
     const filtered = this.filterFigures.filter(figure => {
-        const geometryMatch = geometryTypeValue === "all" || figure.geometryType === GeometryTypes[geometryTypeValue];
-        const sizeValue = parseInt(figure.size, 10);
+        const geometryMatch = geometryTypeValue === "all" || figure.geometryType === geometryTypeValue;
+        const sizeValue = figure.size;
         const sizeMatch = sizeValue >= minSize && sizeValue <= maxSize;
         const colorMatch = color === "#000000" || figure.color.toLowerCase() === color;
         return geometryMatch && sizeMatch && colorMatch;
@@ -140,47 +151,69 @@ export class FigureFilterForm {
     this.onFilterHandler(sorted);
 }
 
-resetFilters(e) {
+resetFilters(e: Event) {
   e.preventDefault();
-  this.form.querySelector("#filterGeometryType").value = "all";
-  this.form.querySelector("#minFilterSize").value = 1;
-  this.form.querySelector("#maxFilterSize").value = 10;
-  this.form.querySelector("#filterColor").value = "#000000";
+
+  const geometrySelect = this.form.querySelector("#filterGeometryType") as HTMLSelectElement;
+  const minSizeInput = this.form.querySelector("#minFilterSize") as HTMLInputElement;
+  const maxSizeInput = this.form.querySelector("#maxFilterSize") as HTMLInputElement;
+  const colorInput = this.form.querySelector("#filterColor") as HTMLInputElement;
+
+  if (!geometrySelect || !minSizeInput || !maxSizeInput || !colorInput) {
+    console.error("One or more form elements are missing!");
+    this.onFilterHandler([]);
+    return;
+  }
+
+  let geometryTypeValue = geometrySelect.value;
+  let minSize = parseInt(minSizeInput.value, 10);
+  let maxSize = parseInt(maxSizeInput.value, 10);
+  let color = colorInput.value.toLowerCase();
+
+  geometryTypeValue = "all";
+  minSize = 1;
+  maxSize = 10;
+  color = "#000000";
 
   this.applyFilters();
 }
 
 restoreFilters() {
-  let filters = JSON.parse(localStorage.getItem("filterParams"));
+  let filters = JSON.parse(localStorage.getItem("filterParams") as string);
   if(!filters) return
 
  const {geometryTypeValue, minSize, maxSize, color} = filters;
 
- this.form.querySelector("#filterGeometryType").value = geometryTypeValue;
- this.form.querySelector("#minFilterSize").value = minSize;
- this.form.querySelector("#maxFilterSize").value = maxSize;
- this.form.querySelector("#filterColor").value = color;
+ const geometrySelect = this.form.querySelector("#filterGeometryType") as HTMLSelectElement;
+ const minSizeInput = this.form.querySelector("#minFilterSize") as HTMLInputElement;
+ const maxSizeInput = this.form.querySelector("#maxFilterSize") as HTMLInputElement;
+ const colorInput = this.form.querySelector("#filterColor") as HTMLInputElement;
+
+ geometrySelect.value = geometryTypeValue;
+ minSizeInput.value = minSize;
+ maxSizeInput.value = maxSize;
+ colorInput.value = color;
 
  this.applyFilters();
 }
 
-setList(list) {
+setList(list: Figure[]) {
   this.filterFigures = list;
   console.log( this.filterFigures); 
 }
 
 
-applySort(array) { 
- const sortValue = this.form.querySelector("#sort").value;
+applySort(array: Figure[]) { 
+ const sortValue = (this.form.querySelector("#sort") as HTMLSelectElement).value;
  let sorted = array; 
   switch (sortValue) {
       case "1":
-        sorted = array.toSorted((a, b) => a.name.localeCompare(b.name, undefined, {
+        sorted = array.sort((a, b) => a.name.localeCompare(b.name, undefined, {
           numeric:true, sensitivity: 'base'
         }));
       break;
       case "2":
-        sorted = array.toSorted((a, b) => a.name.localeCompare(b.name, undefined, {
+        sorted = array.sort((a, b) => a.name.localeCompare(b.name, undefined, {
           numeric:true, sensitivity: 'base'
         })).reverse();
       break;

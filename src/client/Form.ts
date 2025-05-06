@@ -1,6 +1,7 @@
 import { GeometryTypes } from "../models/GeometryTypes";
 
 export class Form {
+  form: HTMLFormElement;
   constructor () {
     this.form = document.createElement("form");
     this.form.classList.add("form-create");
@@ -63,7 +64,7 @@ export class Form {
   }
 
 
-  createFormField(labelText, inputElement) {
+  createFormField(labelText: string, inputElement: HTMLElement) {
     const fieldWrapper = document.createElement("div");
     fieldWrapper.classList.add("formField");
 
@@ -79,18 +80,21 @@ export class Form {
     return this.form;
   }
 
-  onCreate(onFigureCreateCallback) {
+  onCreate(onFigureCreateCallback: Function) {
     this.form.addEventListener("submit", (event) => {
       event.preventDefault();
 
       const [name, geometryType, size, color] = this.form;
 
-      if (this.form[0].value !== "") {
+      if ((this.form[0] as HTMLInputElement).value !== "") {
         onFigureCreateCallback({
-          name: name.value,
-          geometryType: GeometryTypes[geometryType.value],
-          size: size.value,
-          color: color.value,
+          name: (name as HTMLInputElement).value,
+
+          
+
+          geometryType: geometryType,
+          size: (size as HTMLInputElement).value,
+          color: (color as HTMLInputElement).value,
         });
 
         this.clear();
@@ -101,6 +105,6 @@ export class Form {
   }
 
   clear() {
-    this.form[0].value = "";
+    (this.form[0] as HTMLInputElement).value = "";
   }
 }

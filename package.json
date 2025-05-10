@@ -2,6 +2,7 @@
   "name": "shapeshifter-3d-module-project",
   "version": "1.0.0",
   "main": "index.js",
+  "type": "module",
   "scripts": {
     "build": "webpack --mode production",
     "start": "webpack-dev-server --mode development"
@@ -17,7 +18,9 @@
     "babel-loader": "^10.0.0",
     "css-loader": "^7.1.2",
     "html-webpack-plugin": "^5.6.3",
+    "jest": "^29.7.0",
     "style-loader": "^4.0.0",
+    "ts-jest": "^29.3.2",
     "ts-loader": "^9.5.2",
     "typescript": "^5.8.3",
     "webpack": "^5.99.7",

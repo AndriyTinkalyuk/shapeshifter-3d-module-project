@@ -1,0 +1,32 @@
+services:
+  mongodb:
+    image: mongo:7
+    restart: always
+    container_name: shapeshifter-mongo
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo_data:/data/db
+
+  backend:
+    build: ./backend
+    restart: always
+    container_name: shapeshifter-backend
+    ports:
+      - "8080:8080"
+    depends_on:
+      - mongodb
+    environment:
+      - MONGODB_URI=mongodb://mongodb:27017/shapeshifter
+
+  frontend:
+    build: ./frontend
+    restart: always
+    container_name: shapeshifter-frontend
+    ports:
+      - "3000:80" # якщо на nginx, або "3000:3000" якщо через node dev server
+    depends_on:
+      - backend
+
+volumes:
+  mongo_data:

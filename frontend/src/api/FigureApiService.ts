@@ -6,7 +6,7 @@ export class FigureApiService {
     basePath : string;
     constructor() {
         this.data = [];
-        this.basePath = "http://localhost:8080/api/figures";
+        this.basePath = "https://shapeshifter3d.onrender.com/api/figures";
     }
 
     async getFiguresData() {

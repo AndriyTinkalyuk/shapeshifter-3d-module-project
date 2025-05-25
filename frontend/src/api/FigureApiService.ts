@@ -6,7 +6,7 @@ export class FigureApiService {
     basePath : string;
     constructor() {
         this.data = [];
-        this.basePath = "http://localhost:3000/figures";
+        this.basePath = "http://localhost:8080/api/figures";
     }
 
     async getFiguresData() {
@@ -19,30 +19,34 @@ export class FigureApiService {
         }
     }
 
-    async addFigureData(figureData: Figure) {
-        try {
-            const responce = await axios.post(this.basePath, figureData);
-            const newFigureData = responce.data;
-            this.data.push(newFigureData);
-            return newFigureData;
-        } catch (error) {
-            console.error('Error adding figure data:', error);
-        }
+   async addFigureData(figureData: Omit<Figure, 'id'>) {
+    try {
+        const responce = await axios.post(this.basePath, figureData);
+        const newFigureData = responce.data;
+        this.data.push(newFigureData);
+        return newFigureData;
+    } catch (error) {
+        console.error('Error adding figure data:', error);
     }
+}
 
-    async updateFigureData(figureData: Figure) {
-        try {
-            const responce = await axios.put(`${this.basePath}/${figureData.id}`, figureData);
-            const updateFigureData = responce.data;
-            const index = this.data.findIndex((item) => item.id === figureData.id);
-            if (index !== -1) {
-                this.data[index] = updateFigureData;
-                return updateFigureData;
-            } else throw new Error("Couldn't find figure on client side");
-        } catch (error) {
-            console.error("Error while updating figure data:", error);
-        }
+
+async updateFigureData(figureData: Figure) {
+    try {
+        const responce = await axios.put(`${this.basePath}/${figureData.id}`, {
+            updatedName: figureData.name
+        });
+        const updateFigureData = responce.data;
+        const index = this.data.findIndex((item) => item.id === figureData.id);
+        if (index !== -1) {
+            this.data[index] = updateFigureData;
+            return updateFigureData;
+        } else throw new Error("Couldn't find figure on client side");
+    } catch (error) {
+        console.error("Error while updating figure data:", error);
     }
+}
+
 
     async removeFigureData(figureId: string) {
         try {

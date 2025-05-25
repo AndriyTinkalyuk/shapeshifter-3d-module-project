@@ -22,12 +22,12 @@ describe("FigureApiService", () => {
   });
 
 it("should add figure data successfully", async () => {
-  const newFigure = { id: 3, name: "Pyramid" };
+  const newFigure = { id: "someId", name: "Pyramid" };
   axios.post.mockResolvedValue({ data: newFigure });
 
   const result = await figureApiService.addFigureData(newFigure);
 
-  expect(axios.post).toHaveBeenCalledWith("http://localhost:3000/figures", newFigure);
+  expect(axios.post).toHaveBeenCalledWith("http://localhost:8080/api/figures", newFigure);
   expect(result).toEqual(newFigure);
   expect(figureApiService.data).toContainEqual(newFigure);
 });
@@ -38,7 +38,7 @@ it("should add figure data successfully", async () => {
 
     const result = await figureApiService.getFiguresData();
 
-    expect(axios.get).toHaveBeenCalledWith("http://localhost:3000/figures");
+    expect(axios.get).toHaveBeenCalledWith("http://localhost:8080/api/figures");
     expect(result).toBeUndefined();
     expect(console.error).toHaveBeenCalledWith(
       "Error while fetching figures data",
@@ -48,12 +48,12 @@ it("should add figure data successfully", async () => {
   
 
 it("should add figure data successfully", async () => {
-  const newFigure = { id: 3, name: "Pyramid" };
+  const newFigure = { id: "someId", name: "Pyramid" };
   axios.post.mockResolvedValue({ data: newFigure });
 
   const result = await figureApiService.addFigureData(newFigure);
 
-  expect(axios.post).toHaveBeenCalledWith("http://localhost:3000/figures", newFigure);
+  expect(axios.post).toHaveBeenCalledWith("http://localhost:8080/api/figures", newFigure);
   expect(result).toEqual(newFigure); 
   expect(figureApiService.data).toContainEqual(newFigure);
 });
@@ -70,22 +70,26 @@ it("should add figure data successfully", async () => {
     );
   });
 
-  it("should update figure data successfully", async () => {
-    figureApiService.data = [{id: 1, name: "Cube"}];
-    const updatedFigure = {id: 1, name: "Updated Cube"};
-    axios.put.mockResolvedValue({data: updatedFigure});
+ it("should update figure data successfully", async () => {
+  figureApiService.data = [{id: "someId", name: "Cube"}];
+  const updatedFigure = {id: "someId", name: "Updated Cube"};
+  axios.put.mockResolvedValue({data: updatedFigure});
 
-    const result = await figureApiService.updateFigureData(updatedFigure);
+  const result = await figureApiService.updateFigureData(updatedFigure);
 
-    expect(axios.put).toHaveBeenCalledWith("http://localhost:3000/figures/1", updatedFigure);
-    expect(result).toEqual(updatedFigure);
-    expect(figureApiService.data[0]).toEqual(updatedFigure);
-  });
+  expect(axios.put).toHaveBeenCalledWith(
+    "http://localhost:8080/api/figures/someId",
+    { updatedName: "Updated Cube" } 
+  );
+  expect(result).toEqual(updatedFigure);
+  expect(figureApiService.data[0]).toEqual(updatedFigure);
+});
+
 
   it("should handle error while updating figure data", async () => {
     axios.put.mockRejectedValue(new Error("Update figure error"));
 
-    const result = await figureApiService.updateFigureData({id: 1, name: "Cube"});
+    const result = await figureApiService.updateFigureData({id: "someId", name: "Cube"});
 
     expect(result).toBeUndefined();
     expect(console.error).toHaveBeenCalledWith(
@@ -94,16 +98,17 @@ it("should add figure data successfully", async () => {
     );
   });
 
-  it("should remove figure data successfully", async () => {
-    figureApiService.data = [{id: 1, name: "Cube"}];
-    axios.delete.mockResolvedValue();
+it("should remove figure data successfully", async () => {
+  figureApiService.data = [{id: "someId", name: "Cube"}];
+  axios.delete.mockResolvedValue();
 
-    const result = await figureApiService.removeFigureData(1);
+  const result = await figureApiService.removeFigureData("someId");
 
-    expect(axios.delete).toHaveBeenCalledWith("http://localhost:3000/figures/1");
-    expect(result).toEqual(1);
-    expect(figureApiService.data).toEqual([]);
-  });
+  expect(axios.delete).toHaveBeenCalledWith("http://localhost:8080/api/figures/someId");
+  expect(result).toEqual("someId");
+  expect(figureApiService.data).toEqual([]);
+});
+
 
   it("should handle error while removing figure data", async () => {
     axios.delete.mockRejectedValue(new Error("Remove figure error"));

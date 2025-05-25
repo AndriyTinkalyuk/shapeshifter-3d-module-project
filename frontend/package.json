@@ -2,7 +2,6 @@
   "name": "shapeshifter-3d-module-project",
   "version": "1.0.0",
   "main": "index.js",
-  "type": "module",
   "scripts": {
     "build": "webpack --mode production",
     "start": "webpack-dev-server --mode development"

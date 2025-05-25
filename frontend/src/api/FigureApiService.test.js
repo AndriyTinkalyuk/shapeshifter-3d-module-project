@@ -27,7 +27,7 @@ it("should add figure data successfully", async () => {
 
   const result = await figureApiService.addFigureData(newFigure);
 
-  expect(axios.post).toHaveBeenCalledWith("http://localhost:8080/api/figures", newFigure);
+  expect(axios.post).toHaveBeenCalledWith("https://shapeshifter3d.onrender.com/api/figures", newFigure);
   expect(result).toEqual(newFigure);
   expect(figureApiService.data).toContainEqual(newFigure);
 });
@@ -38,7 +38,7 @@ it("should add figure data successfully", async () => {
 
     const result = await figureApiService.getFiguresData();
 
-    expect(axios.get).toHaveBeenCalledWith("http://localhost:8080/api/figures");
+    expect(axios.get).toHaveBeenCalledWith("https://shapeshifter3d.onrender.com/api/figures");
     expect(result).toBeUndefined();
     expect(console.error).toHaveBeenCalledWith(
       "Error while fetching figures data",
@@ -53,7 +53,7 @@ it("should add figure data successfully", async () => {
 
   const result = await figureApiService.addFigureData(newFigure);
 
-  expect(axios.post).toHaveBeenCalledWith("http://localhost:8080/api/figures", newFigure);
+  expect(axios.post).toHaveBeenCalledWith("https://shapeshifter3d.onrender.com/api/figures", newFigure);
   expect(result).toEqual(newFigure); 
   expect(figureApiService.data).toContainEqual(newFigure);
 });
@@ -78,7 +78,7 @@ it("should add figure data successfully", async () => {
   const result = await figureApiService.updateFigureData(updatedFigure);
 
   expect(axios.put).toHaveBeenCalledWith(
-    "http://localhost:8080/api/figures/someId",
+    "https://shapeshifter3d.onrender.com/api/figures/someId",
     { updatedName: "Updated Cube" } 
   );
   expect(result).toEqual(updatedFigure);
@@ -104,7 +104,7 @@ it("should remove figure data successfully", async () => {
 
   const result = await figureApiService.removeFigureData("someId");
 
-  expect(axios.delete).toHaveBeenCalledWith("http://localhost:8080/api/figures/someId");
+  expect(axios.delete).toHaveBeenCalledWith("https://shapeshifter3d.onrender.com/api/figures/someId");
   expect(result).toEqual("someId");
   expect(figureApiService.data).toEqual([]);
 });
